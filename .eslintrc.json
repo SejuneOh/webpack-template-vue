@@ -1,0 +1,36 @@
+{
+  "env": {
+    // 실행하는 환경을 eslint를 활성화 할 것인지 설정한다.
+    "browser": true,
+    "node": true
+  },
+  // 검사할 대상의 코드 규칙을 설정한다.
+  "extends": [
+    "eslint:recommended", //javascript 규칙을 설정한다.
+    // "plugin:vue/vue3-essential" lv1
+    // "plugin:vue/vue3-strongly-recommended" //lv2
+    "plugin:vue/vue3-recommended" //lv3
+  ],
+  // eslint 규칙
+  "rules": {
+    "semi": ["error", "never"],
+    "quotes": ["error", "single"],
+    "eol-last": ["error", "always"],
+
+    "vue/html-closing-bracket-newline": ["error", {
+      "singleline": "never",
+      "multiline": "never"
+    }],
+    "vue/html-self-closing": ["error", {
+      "html": {
+        "void": "always",
+        "normal": "never",
+        "component": "always"
+      },
+      "svg": "always",
+      "math": "always"
+    }],
+    "vue/comment-directive": "off",
+    "vue/multi-word-component-names": "off"
+  }
+}
